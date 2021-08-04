@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 //const hbs = require('hbs');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const staticPath = path.join(__dirname, "../express/public");
 //console.log(path.join(__dirname, "../express/public"));
 app.use(express.static(staticPath));
