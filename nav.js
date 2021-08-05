@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 const staticPath = path.join(__dirname, "../express/public");
 //console.log(path.join(__dirname, "../express/public"));
 app.use(express.static(staticPath));
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
     res.send('index');
 })
 app.listen(port, () => {
